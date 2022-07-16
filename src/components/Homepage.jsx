@@ -3,6 +3,8 @@ import millify from 'millify';
 import { Typography, Row, Col, Statistic } from 'antd';
 import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../services/CryptoApi';
+import CryptoCurrencies from '../components/CryptoCurrencies';
+import News from '../components/News';
 
 const Homepage = () => {
 	const { data, isFetching } = useGetCryptosQuery();
@@ -47,6 +49,28 @@ const Homepage = () => {
 					/>
 				</Col>
 			</Row>
+
+			<div className="home-heading-container">
+				<Typography.Title level={2} className="home-title">
+					Top 10 Cryto Currecies in the World!
+				</Typography.Title>
+
+				<Typography.Title level={3} className="show-more">
+					<Link to="/crytoCurrencies">Show more</Link>
+				</Typography.Title>
+			</div>
+			<CryptoCurrencies simplified />
+
+			<div className="home-heading-container">
+				<Typography.Title level={2} className="home-title">
+					Lastest Cryto News!
+				</Typography.Title>
+
+				<Typography.Title level={3} className="show-more">
+					<Link to="/news">Show more</Link>
+				</Typography.Title>
+			</div>
+			<News simplified />
 		</>
 	);
 };

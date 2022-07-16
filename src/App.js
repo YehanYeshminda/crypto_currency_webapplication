@@ -30,7 +30,7 @@ function App() {
 							<Route exact path="/crytoCurrencies">
 								<CryptoCurrencies />
 							</Route>
-							<Route exact path="/cryto/:coinid">
+							<Route exact path="/crypto/:coinid">
 								<CrytoDetails />
 							</Route>
 							<Route exact path="/news">
