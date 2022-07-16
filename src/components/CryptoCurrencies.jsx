@@ -5,16 +5,20 @@ import { Link } from 'react-router-dom';
 import { Card, Row, Col, Input } from 'antd';
 import { useGetCryptosQuery } from '../services/CryptoApi';
 
-const CryptoCurrencies = () => {
-	const { data: cryptoListData, isFetching } = useGetCryptosQuery();
+// this default simplied is set to true
+const CryptoCurrencies = ({ simplified }) => {
+	const count = simplified ? 10 : 100;
+	const { data: cryptoListData, isFetching } = useGetCryptosQuery(count);
 	const [crytos, setCrytos] = useState(cryptoListData?.data?.coins);
 
 	console.log(crytos);
 
+	if (isFetching) return 'Loading Page...';
+
 	return (
 		<>
 			<Row gutter={[32, 32]} className="crypto-card-container">
-				{crytos.map((ele) => (
+				{crytos?.map((ele) => (
 					<Col xs={24} sm={12} lg={6} className="crypto-card" key={ele.id}>
 						<Link to={`/cryto/${ele.id}`}>
 							<Card

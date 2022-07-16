@@ -7,7 +7,7 @@ import CryptoCurrencies from '../components/CryptoCurrencies';
 import News from '../components/News';
 
 const Homepage = () => {
-	const { data, isFetching } = useGetCryptosQuery();
+	const { data, isFetching } = useGetCryptosQuery(10);
 
 	const globalStats = data?.data?.stats;
 
