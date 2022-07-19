@@ -1,3 +1,5 @@
+// used with redux to get the data from the rapid api
+
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const cruptoApiHeader = {
@@ -8,7 +10,6 @@ const cruptoApiHeader = {
 const baseUrl = 'https://coinranking1.p.rapidapi.com';
 
 const createRequest = (url) => ({ url, headers: cruptoApiHeader });
-
 export const cryptoApi = createApi({
 	reducerPath: 'cryptoApi',
 	baseQuery: fetchBaseQuery({ baseUrl }),
