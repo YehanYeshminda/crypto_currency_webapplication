@@ -6,7 +6,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import Exchanges from './components/Exchanges';
-import CrytoDetails from './components/CrytoDetails';
+import CryptoDetails from './components/CryptoDetails';
 import News from './components/News';
 import CryptoCurrencies from './components/CryptoCurrencies';
 
@@ -30,8 +30,8 @@ function App() {
 							<Route exact path="/crytoCurrencies">
 								<CryptoCurrencies />
 							</Route>
-							<Route exact path="/crypto/:coinid">
-								<CrytoDetails />
+							<Route exact path="/crypto/:coinId">
+								<CryptoDetails />
 							</Route>
 							<Route exact path="/news">
 								<News />
