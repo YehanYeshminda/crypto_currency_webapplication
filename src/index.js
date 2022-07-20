@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter, BrowserRouter as router } from 'react-router-dom';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import Store from './App/Store.js';
 import { Provider } from 'react-redux';
 

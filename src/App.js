@@ -5,8 +5,6 @@ import './App.css';
 // imports of the pages
 import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
-import Exchanges from './components/Exchanges';
-import CryptoDetails from './components/CryptoDetails';
 import News from './components/News';
 import CryptoCurrencies from './components/CryptoCurrencies';
 
@@ -24,14 +22,8 @@ function App() {
 							<Route exact path="/">
 								<Homepage />
 							</Route>
-							<Route exact path="/exchanges">
-								<Exchanges />
-							</Route>
 							<Route exact path="/crytoCurrencies">
 								<CryptoCurrencies />
-							</Route>
-							<Route exact path="/crypto/:coinId">
-								<CryptoDetails />
 							</Route>
 							<Route exact path="/news">
 								<News />

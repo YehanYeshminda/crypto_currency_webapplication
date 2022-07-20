@@ -59,7 +59,7 @@ const News = ({ simplified }) => {
 								<img
 									style={{ maxWidth: '200px', maxHeight: '100px' }}
 									src={news?.image?.thumbnail?.contentUrl || demoImage}
-									alt="cryto Image"
+									alt="crytocurrecy"
 									srcset=""
 								/>
 							</div>
